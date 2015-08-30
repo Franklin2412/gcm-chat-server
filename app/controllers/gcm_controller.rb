@@ -1,3 +1,7 @@
+require 'open-uri'
+require 'nokogiri'
+require 'net/http'
+
 class GcmController < ApplicationController
 
   skip_before_action :verify_authenticity_token
