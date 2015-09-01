@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  resources :users
+  resources :users, only: [:index, :create]
 
   match '/send_notification' => 'gcm#send_notification', via: :post
   match '/get_messages' => 'gcm#get_messages', via: :post

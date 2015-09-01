@@ -23,7 +23,7 @@ class GcmController < ApplicationController
         post_data = ActiveSupport::JSON.encode({ to: receiver.gcm_id, data: {message: params[:content]}})
 
         headers = {
-            'Authorization' => 'key=AIzaSyDdXKKKmhYJeOAMK8ejqkbgrWVPs9Pq4Po',
+            'Authorization' => 'key=yourapplicationkey',
             'Content-Type' => 'application/json'
         }
         resp, data = https.post(uri.path, post_data, headers)
